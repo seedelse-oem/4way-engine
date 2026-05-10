@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4way-brain-engine | Resonance</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .story-section { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; opacity: 0; transform: translateY(50px); transition: 1.5s ease-out; }
+        .story-section.visible { opacity: 1; transform: translateY(0); }
+        .reveal-text { font-size: 1.7rem; max-width: 800px; color: var(--text-dim); line-height: 2.3; }
+        .highlight { color: var(--accent); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="active">INTRO</a>
+    <a href="philosophy.html">PHILOSOPHY</a>
+    <a href="tech.html">TECH</a>
+</nav>
+
+<section class="story-section visible">
+    <h1 style="font-size: 4.5rem; margin: 0;">4way-brain-engine</h1>
+    <p class="accent" style="letter-spacing: 0.6em; margin-bottom: 60px;">BEYOND THE NOISE</p>
+    <p class="reveal-text">
+        デジタルという「牢獄」の中で、<br>
+        我々の知性は断片化され、音は平坦になり、精神は摩耗した。
+    </p>
+</section>
+
+<section class="story-section">
+    <p class="reveal-text">
+        2WAYの衝突を超えた先にある、<span class="highlight">「四極の共鳴」</span>。<br>
+        古の哲学が説いた宇宙の脈動を、<br>
+        1と0の深淵から呼び覚ます。
+    </p>
+</section>
+
+<section class="story-section">
+    <p class="reveal-text">
+        これは単なる演算ではない。<br>
+        あなたのRyzenの鼓動と、老子の「道」が同期する、<br>
+        <span class="highlight">精神の拡張インターフェース</span>だ。
+    </p>
+</section>
+
+<section class="story-section" style="min-height: 100vh;">
+    <h2 style="font-size: 3.5rem; border: none;">Activate the Engine</h2>
+    <p class="reveal-text" style="font-size: 1.3rem;">
+        ノイズを捨て、共鳴を選べ。<br>
+        4way-brain-engineのアクティベートを開始する。
+    </p>
+    <a href="https://buy.stripe.com/cNi9AU61D2njfyp4dncbC00" class="cta-button">エンジンの火を入れる</a>
+    <p style="margin-top: 40px; font-family: monospace; color: #4b5563;">Stripe Gateway: ACTIVE / Version: 4way-OS-Core</p>
+</section>
+
+<script>
+    const sections = document.querySelectorAll('.story-section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.25 });
+    sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
